@@ -20,10 +20,8 @@ public class UDPEchoServer {
         //Primero se verifica que la ruta del servidor exista, y que esta sea una ruta adecuado
         String rutaServidor = "";
         Scanner teclado = new Scanner(System.in);
-        System.out.println("""
-                           Para establecer una carpeta que sea el servidor de archivos
-                           escriba la ruta de esta carpetera; 
-                           Ejemplo; C:\\Users\\josej\\OneDrive\\Escritorio\\nombre-carpeta""");
+        System.out.println("Para establecer una carpeta que sea el servidor de archivosescriba la ruta de esta carpetera. \n"
+                + "Ejemplo; C:\\Users\\josej\\OneDrive\\Escritorio\\nombre-carpeta");
         System.out.println("--------------------------------------------------");
         do {
             System.out.println("Ahora digite la ruta ");
