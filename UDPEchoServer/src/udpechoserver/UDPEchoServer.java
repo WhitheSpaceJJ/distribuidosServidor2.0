@@ -16,11 +16,11 @@ import java.util.Scanner;
 
 public class UDPEchoServer {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, InterruptedException {
         //Primero se verifica que la ruta del servidor exista, y que esta sea una ruta adecuado
         String rutaServidor = "";
         Scanner teclado = new Scanner(System.in);
-        System.out.println("Para establecer una carpeta que sea el servidor de archivosescriba la ruta de esta carpetera. \n"
+        System.out.println("Para establecer una carpeta que sea el servidor de archivos, escriba la ruta de esta carpetera. \n"
                 + "Ejemplo; C:\\Users\\josej\\OneDrive\\Escritorio\\nombre-carpeta");
         System.out.println("--------------------------------------------------");
         do {
@@ -53,9 +53,10 @@ public class UDPEchoServer {
             }
             if (auxiliar == 0) {
                 System.out.println("--------------------------------------------------");
+                Thread.sleep(2000);
                 System.out.println("No existen archivos en la carpeta, coloque algunos");
-            }else{
-            break;
+            } else {
+                break;
             }
         } while (true);
 
